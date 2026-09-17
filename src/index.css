@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  --color-suteki-coral: #DC5D5D;
+  --color-suteki-burgundy: #943535;
+  --color-suteki-rose: #E37A7B;
+  --color-suteki-cream: #F6EFE4;
+  --color-suteki-charcoal: #3C3C3B;
+  --color-suteki-sage: #B0AF9F;
+  --color-suteki-teal: #93C2BC;
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #F6EFE4;
+  color: #3C3C3B;
+}
+
+.font-brand {
+  font-family: "Fredoka", sans-serif;
+}
+
+.font-cubano {
+  font-family: "Paytone One", "Fredoka", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Suteki Hanko Japanese Seal Stamp */
+.hanko-seal {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  line-height: 1;
+  font-weight: 900;
+  user-select: none;
+}
+
+/* Custom scrollbar for menu navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth entrance transitions for menu items and categories */
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-item {
+  animation: menuFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes categoryFade {
+  from {
+    opacity: 0.1;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-category-fade {
+  animation: categoryFade 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}

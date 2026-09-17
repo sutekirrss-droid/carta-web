@@ -1,0 +1,8 @@
+{
+  "name": "Suteki - Menú Digital & Panel",
+  "description": "Panel de administración en tiempo real y menú digital interactivo con código QR para Suteki Sushi & Cocina Nikkei.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
